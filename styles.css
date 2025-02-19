@@ -785,11 +785,13 @@ body {
     }
 }
 @media screen and (max-width: 414px) {
+    /* Container */
     .container {
         width: 95%;
         padding: 0 10px;
     }
 
+    /* Home Section */
     .home-content h1 {
         font-size: 1.8rem;
         margin-bottom: 15px;
@@ -800,35 +802,45 @@ body {
         font-size: 0.9rem;
     }
 
+    /* Logo Container */
     .logo-container {
         width: 80px;
         height: 80px;
         top: 15%;
     }
 
+    /* Bottom Navigation - Updated to 3x2 Grid */
     .bottom-nav {
         bottom: 5%;
         width: 98%;
         padding: 5px;
-        gap: 3px;
-        flex-wrap: wrap;
-        justify-content: center;
+        gap: 5px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
     }
 
     .bottom-nav .nav-item {
-        padding: 5px 8px;
-        min-width: 45px;
+        padding: 8px 5px;
+        min-width: unset;
+        width: 100%;
         font-size: 0.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .bottom-nav .nav-item i {
-        font-size: 0.8rem;
-        margin-bottom: 2px;
+        font-size: 0.9rem;
+        margin-bottom: 3px;
     }
 
     .bottom-nav .nav-item span {
-        font-size: 0.6rem;
+        font-size: 0.65rem;
+        white-space: nowrap;
     }
+
 
     .about-content {
         flex-direction: column;
@@ -845,12 +857,15 @@ body {
     }
 
     .skills-grid {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
 
     .skill-item {
         padding: 10px;
+        min-width: unset;
+        width: 100%;
     }
 
     .skill-item i {
@@ -953,8 +968,15 @@ body {
 
 @media screen and (max-width: 360px) {
     .bottom-nav .nav-item {
-        padding: 4px 6px;
-        min-width: 40px;
+        padding: 6px 4px;
+    }
+
+    .bottom-nav .nav-item i {
+        font-size: 0.8rem;
+    }
+
+    .bottom-nav .nav-item span {
+        font-size: 0.6rem;
     }
 
     .home-content h1 {
@@ -962,7 +984,8 @@ body {
     }
 
     .skills-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
     }
 
     .logo-container {
