@@ -808,7 +808,7 @@ body {
     .bottom-nav {
         bottom: 5%;
         width: 100%;
-        padding: 5px;
+        padding: 15px;
         gap: 1px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
