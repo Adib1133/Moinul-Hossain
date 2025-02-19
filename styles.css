@@ -14,11 +14,12 @@ body {
     padding: 0;
     line-height: 1.6;
     overflow-x: hidden;
+    position: relative;
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -785,6 +786,20 @@ body {
     }
 }
 @media screen and (max-width: 414px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Ensure all sections fill width */
+    section {
+        width: 100%;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
 
     /* Home Section */
     .home-content h1 {
@@ -804,7 +819,7 @@ body {
         top: 15%;
     }
 
-    /* Bottom Navigation - Updated to 3x2 Grid */
+
     .bottom-nav {
         bottom: 0%;
         width: 100%;
@@ -961,6 +976,9 @@ body {
 }
 
 @media screen and (max-width: 360px) {
+    .container {
+        padding: 0 10px;
+    }
     .bottom-nav .nav-item {
         padding: 6px 4px;
     }
