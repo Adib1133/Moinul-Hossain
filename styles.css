@@ -784,3 +784,189 @@ body {
         top: 10%;
     }
 }
+@media screen and (max-width: 414px) {
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+
+    .home-content h1 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .flip-text .front, 
+    .flip-text .back {
+        font-size: 0.9rem;
+    }
+
+    .logo-container {
+        width: 80px;
+        height: 80px;
+        top: 15%;
+    }
+
+    .bottom-nav {
+        bottom: 5%;
+        width: 98%;
+        padding: 5px;
+        gap: 3px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .bottom-nav .nav-item {
+        padding: 5px 8px;
+        min-width: 45px;
+        font-size: 0.6rem;
+    }
+
+    .bottom-nav .nav-item i {
+        font-size: 0.8rem;
+        margin-bottom: 2px;
+    }
+
+    .bottom-nav .nav-item span {
+        font-size: 0.6rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-text p {
+        font-size: 0.9rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .skill-item {
+        padding: 10px;
+    }
+
+    .skill-item i {
+        font-size: 1.5rem;
+    }
+
+    .skill-item h3 {
+        font-size: 0.8rem;
+    }
+
+    .education-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .education-item {
+        padding: 15px;
+    }
+
+    .institute-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .experience-item {
+        padding: 15px;
+    }
+
+    .experience-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .experience-item p,
+    .experience-item li {
+        font-size: 0.9rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .project-item {
+        padding: 15px;
+    }
+
+    .project-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .project-item p {
+        font-size: 0.9rem;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .social-links a {
+        font-size: 1.3rem;
+        margin: 0 8px;
+    }
+
+    .download-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .download-pun {
+        font-size: 0.8rem;
+        max-width: 200px;
+    }
+
+    #scrollToTopBtn {
+        bottom: 70px;
+        right: 15px;
+        font-size: 1.2rem;
+        padding: 8px 12px;
+    }
+
+    .about-section,
+    .skills-section,
+    .education-section,
+    .experience-section,
+    .projects-section,
+    .contact-section {
+        padding: 50px 0;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .bottom-nav .nav-item {
+        padding: 4px 6px;
+        min-width: 40px;
+    }
+
+    .home-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .logo-container {
+        width: 70px;
+        height: 70px;
+    }
+}
