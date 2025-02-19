@@ -806,10 +806,9 @@ body {
 
     /* Bottom Navigation - Updated to 3x2 Grid */
     .bottom-nav {
-        bottom: 5%;
+        bottom: 0%;
         width: 100%;
         padding: 15px;
-        gap: 1px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, auto);
