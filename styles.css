@@ -1,5 +1,4 @@
 
-/* styles.css */
 :root {
     --primary-color: #00adb5;
     --secondary-color: #393e46;
@@ -23,7 +22,6 @@ body {
     margin: 0 auto;
 }
 
-/* Particle Container */
 #particles-js {
     position: absolute;
     width: 100%;
@@ -32,9 +30,7 @@ body {
     left: 0;
     z-index: -1;
 }
-/* Add this to your existing styles.css file */
 
-/* Apply Merriweather font to specific elements */
 .flip-text .front,
 .flip-text .back,
 .about-section h2,
@@ -45,25 +41,23 @@ body {
 .contact-section h2,
 .contact-content p {
     font-family: 'Merriweather', serif;
-    font-weight: 700; /* Bold weight for Merriweather */
+    font-weight: 700; 
 }
-/* Add this to your existing styles.css file */
 
-/* Apply Merriweather font to the bottom navigation bar text */
 .bottom-nav .nav-item,
 .bottom-nav .nav-item span {
     font-family: 'Merriweather', serif;
-    font-weight: 500; /* Adjust the weight as needed */
+    font-weight: 500;
 }
-/* Logo Container Styles */
+
 .logo-container {
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    width: 120px; /* Adjust based on your logo size */
-    height: 120px; /* Adjust based on your logo size */
+    width: 120px; 
+    height: 120px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,14 +67,14 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2)); /* Optional: adds a subtle glow */
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2)); 
     transition: transform 0.3s ease;
 }
 
 .logo-container img:hover {
     transform: scale(1.05);
 }
-/* Home Section with Gradient Background */
+
 .home-section {
     height: 100vh;
     display: flex;
@@ -89,14 +83,14 @@ body {
     text-align: center;
     background: linear-gradient(
         45deg,
-        #000000,       /* Black */
-        #0a0a0a,       /* Very dark gray */
-        #001f3f,       /* Dark navy blue */
-        #003366,       /* Darker blue */
-        #002244,       /* Even darker blue */
-        #000033,       /* Very dark blue */
-        #000022,       /* Almost black blue */
-        #000011        /* Darkest blue */
+        #000000,
+        #0a0a0a,
+        #001f3f,
+        #003366,
+        #002244,
+        #000033,
+        #000022,
+        #000011
     );
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
@@ -116,7 +110,6 @@ body {
     }
 }
 
-/* Bottom Navigation Bar - Updated Styles */
 .bottom-nav {
     position: absolute;
     bottom: 25%;
@@ -124,17 +117,17 @@ body {
     transform: translateX(-50%);
     display: flex;
     gap: 15px;
-    background-color: rgba(34, 40, 49, 0.2); /* Using your portfolio's dark background color */
+    background-color: rgba(34, 40, 49, 0.2);
     padding: 10px;
     border-radius: 20px;
     z-index: 1000;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 4px 15px rgba(0, 173, 181, 0.1); /* Using your cyan color */
-    border: 1px solid rgba(0, 173, 181, 0.1); /* Using your cyan color */
-    width: 100%; /* Adjust this value to make the navbar narrower */
-    max-width: 750px; /* Optional: Set a maximum width to prevent it from becoming too wide on larger screens */
-    justify-content: center; /* Center the buttons horizontally */
+    box-shadow: 0 4px 15px rgba(0, 173, 181, 0.1);
+    border: 1px solid rgba(0, 173, 181, 0.1);
+    width: 100%;
+    max-width: 750px;
+    justify-content: center;
 }
 
 .bottom-nav .nav-item {
@@ -149,11 +142,11 @@ body {
     border-radius: 12px;
     min-width: 80px;
     background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(0, 173, 181, 0.1); /* Using your cyan color */
-    box-shadow: 0 0 10px rgba(0, 173, 181, 0.05); /* Using your cyan color */
+    border: 1px solid rgba(0, 173, 181, 0.1);
+    box-shadow: 0 0 10px rgba(0, 173, 181, 0.05);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    padding: 8px 15px; /* Reduced padding to make buttons narrower */
+    padding: 8px 15px;
 }
 
 .bottom-nav .nav-item i {
@@ -167,21 +160,21 @@ body {
 }
 
 .bottom-nav .nav-item:hover {
-    background-color: #00adb5; /* Your portfolio's cyan color */
+    background-color: #00adb5;
     color: white;
-    border: 1px solid rgba(0, 173, 181, 0.4); /* Using your cyan color */
-    box-shadow: 0 0 15px rgba(0, 173, 181, 0.3); /* Using your cyan color */
+    border: 1px solid rgba(0, 173, 181, 0.4);
+    box-shadow: 0 0 15px rgba(0, 173, 181, 0.3);
 }
 
 @keyframes borderPulse {
     0% {
-        box-shadow: 0 0 10px rgba(0, 173, 181, 0.05); /* Using your cyan color */
+        box-shadow: 0 0 10px rgba(0, 173, 181, 0.05);
     }
     50% {
-        box-shadow: 0 0 15px rgba(0, 173, 181, 0.1); /* Using your cyan color */
+        box-shadow: 0 0 15px rgba(0, 173, 181, 0.1);
     }
     100% {
-        box-shadow: 0 0 10px rgba(0, 173, 181, 0.05); /* Using your cyan color */
+        box-shadow: 0 0 10px rgba(0, 173, 181, 0.05);
     }
 }
 
@@ -192,12 +185,12 @@ body {
 .bottom-nav .nav-item:hover {
     animation: none;
 }
-/* Icons for Computer Science Themes */
+
 .icon {
     position: absolute;
     font-size: 2rem;
-    color: rgba(0, 173, 181, 0.5); /* Semi-transparent primary color */
-    z-index: 1; /* Ensure icons are above the particle container */
+    color: rgba(0, 173, 181, 0.5);
+    z-index: 1;
     animation: float 6s infinite ease-in-out, changeIcon 10s infinite ease-in-out;
 }
 
@@ -221,7 +214,7 @@ body {
     }
 }
 
-/* Icon Positions */
+
 .icon-1 { top: 15%; left: 5%; }
 .icon-2 { top: 25%; left: 15%; }
 .icon-3 { top: 35%; left: 10%; }
@@ -239,12 +232,10 @@ body {
 .icon-15 { top: 75%; right: 15%; }
 .icon-16 { top: 85%; right: 5%; }
 
-
-/* Home Section */
 .home-content h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: #b3b6c4; /* Greyish white */
+    color: #b3b6c4;
 	font-family: 'Merriweather', serif;
     font-weight: 700;
 }
@@ -275,7 +266,7 @@ body {
     }
 }
 .flip-text .front {
-    color: #00667a; /* Greyish white */
+    color: #00667a;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -287,7 +278,7 @@ body {
     font-weight: 500;
 }
 .flip-text .back {
-    color: #00667a; /* Dark cyan */
+    color: #00667a;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -300,9 +291,6 @@ body {
     font-weight: 500;
 }
 
-
-
-/* Button Styles */
 .btn {
     background-color: var(--primary-color);
     color: var(--text-color);
@@ -321,8 +309,6 @@ body {
     box-shadow: 0 0 20px rgba(0, 173, 181, 0.4);
 }
 
-/* Rest of the CSS remains the same */
-/* About Section */
 .about-section {
     padding: 100px 0;
     position: relative;
@@ -353,7 +339,6 @@ body {
     box-shadow: 0 0 25px rgba(0, 173, 181, 0.5);
 }
 
-/* Skills Section */
 .skills-section {
     padding: 100px 0;
     position: relative;
@@ -383,7 +368,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Education Section */
 .education-section {
     padding: 100px 0;
     position: relative;
@@ -418,7 +402,7 @@ body {
     height: 50px;
     margin-bottom: 10px;
 }
-/* Experience Section */
+
 .experience-section {
     padding: 100px 0;
     position: relative;
@@ -459,7 +443,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Projects Section */
 .projects-section {
     padding: 100px 0;
     position: relative;
@@ -520,7 +503,6 @@ body {
 }
 
 
-/* Download CV Section */
 .download-cv-section {
     padding: 50px 0;
     text-align: center;
@@ -589,7 +571,6 @@ body {
     transform: translateX(-50%) translateY(0);
 }
 
-/* Contact Section */
 .contact-section {
     padding: 100px 0;
     position: relative;
@@ -645,19 +626,13 @@ body {
     background-color: #00979e;
 }
 
-/* Footer Section */
 .footer {
     background-color: var(--secondary-color);
     padding: 10px 0;
     text-align: center;
 }
-/* ... */
 
-/* Add this at the end of your styles.css file */
-
-/* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
-    /* Adjust font sizes */
     body {
         font-size: 14px;
     }
@@ -707,9 +682,9 @@ body {
         width: 90%;
     }
 }
-/* Scroll to Top Button */
+
 #scrollToTopBtn {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -728,64 +703,57 @@ body {
 #scrollToTopBtn:hover {
     background-color: #00979e;
 }
-/* Add this to your existing styles.css file */
 
-/* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
     .bottom-nav {
-        bottom: 10px; /* Adjusted position for mobile */
-        width: 95%; /* Slightly wider on mobile */
-        max-width: 95%; /* Ensure it doesn't exceed the screen width */
-        padding: 8px; /* Reduced padding for mobile */
-        gap: 5px; /* Reduced gap for mobile */
-        border-radius: 15px; /* Slightly smaller border radius */
+        bottom: 10px;
+        width: 95%;
+        max-width: 95%;
+        padding: 8px;
+        gap: 5px;
+        border-radius: 15px;
     }
 
     .bottom-nav .nav-item {
-        padding: 6px 10px; /* Further reduced padding for mobile */
-        font-size: 0.7rem; /* Smaller font size for mobile */
-        min-width: 50px; /* Further reduced minimum width for mobile */
+        padding: 6px 10px;
+        font-size: 0.7rem;
+        min-width: 50px;
     }
 
     .bottom-nav .nav-item i {
-        font-size: 0.9rem; /* Smaller icon size for mobile */
-        margin-bottom: 3px; /* Reduced space between icon and text */
+        font-size: 0.9rem;
+        margin-bottom: 3px;
     }
 
     .bottom-nav .nav-item span {
-        font-size: 0.65rem; /* Smaller text size for mobile */
+        font-size: 0.65rem;
     }
 }
 
 @media (max-width: 768px) {
     #particles-js {
-        height: 50vh; /* Adjust as needed */
+        height: 50vh;
     }
 }
-/* Add this new media query at the end of your styles.css file */
 
 @media screen and (min-width: 1024px) and (max-width: 1366px) and (max-height: 768px) {
-    /* Adjust bottom nav position */
     .bottom-nav {
-        bottom: 15%; /* Move it up from the bottom */
+        bottom: 15%; 
     }
 
-    /* Adjust logo position */
     .logo-container {
-        top: 15%; /* Move logo slightly up */
+        top: 15%;
     }
 
-    /* Adjust home content spacing */
+
     .home-content {
-        margin-top: -50px; /* Move content up slightly */
+        margin-top: -50px;
     }
 
-    /* Adjust flip text container */
     .flip-text-container {
-        margin-bottom: 40px; /* Increase space below flip text */
+        margin-bottom: 40px;
     }
 
-    /* Make bottom nav slightly smaller */
     .bottom-nav .nav-item {
         padding: 8px 12px;
         min-width: 84px;
@@ -800,7 +768,6 @@ body {
     }
 }
 
-/* Additional optimization for very similar resolutions */
 @media screen and (min-width: 1280px) and (max-width: 1440px) and (max-height: 900px) {
     .bottom-nav {
         bottom: 18%;
@@ -818,7 +785,6 @@ body {
         padding: 0;
     }
     
-    /* Ensure all sections fill width */
     section {
         width: 100%;
         margin: 0;
@@ -826,7 +792,6 @@ body {
         padding-right: 0;
     }
 
-    /* Home Section */
     .home-content h1 {
         font-size: 1.8rem;
         margin-bottom: 15px;
@@ -837,11 +802,10 @@ body {
         font-size: 0.9rem;
     }
 
-    /* Logo Container */
     .logo-container {
         width: 80px;
         height: 80px;
-        top: 15%;
+        top: 25%;
     }
 
 
