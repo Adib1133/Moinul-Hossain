@@ -785,11 +785,6 @@ body {
     }
 }
 @media screen and (max-width: 414px) {
-    /* Container */
-    .container {
-        width: 100%;
-        padding: 0 10px;
-    }
 
     /* Home Section */
     .home-content h1 {
@@ -812,9 +807,9 @@ body {
     /* Bottom Navigation - Updated to 3x2 Grid */
     .bottom-nav {
         bottom: 5%;
-        width: 98%;
+        width: 100%;
         padding: 5px;
-        gap: 5px;
+        gap: 1px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, auto);
@@ -823,7 +818,7 @@ body {
     .bottom-nav .nav-item {
         padding: 8px 5px;
         min-width: unset;
-        width: 100%;
+        width: 90%;
         font-size: 0.6rem;
         display: flex;
         flex-direction: column;
@@ -865,7 +860,7 @@ body {
     .skill-item {
         padding: 10px;
         min-width: unset;
-        width: 100%;
+        width: 90%;
     }
 
     .skill-item i {
