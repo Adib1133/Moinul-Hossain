@@ -356,6 +356,7 @@ body {
     border-radius: 10px;
     text-align: center;
     transition: transform 0.3s ease;
+	min-height: 110px
 }
 
 .skill-item:hover {
