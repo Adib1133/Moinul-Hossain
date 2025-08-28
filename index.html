@@ -5,13 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moinul Hossain - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto+Mono:wght@500&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="particles-js"></div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="menu-toggle" onclick="toggleMobileMenu()">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        <div class="mobile-nav-menu" id="mobileNavMenu">
+            <a href="#about" class="nav-item" onclick="closeMobileMenu()">
+                <i class="fas fa-user"></i>
+                <span>About Me</span>
+            </a>
+            <a href="#skills" class="nav-item" onclick="closeMobileMenu()">
+                <i class="fas fa-cogs"></i>
+                <span>Skills</span>
+            </a>
+            <a href="#education" class="nav-item" onclick="closeMobileMenu()">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Education</span>
+            </a>
+            <a href="#experience" class="nav-item" onclick="closeMobileMenu()">
+                <i class="fas fa-briefcase"></i>
+                <span>Experience</span>
+            </a>
+            <a href="#projects" class="nav-item" onclick="closeMobileMenu()">
+                <i class="fas fa-project-diagram"></i>
+                <span>Projects</span>
+            </a>
+            <a href="#contact" class="nav-item" onclick="closeMobileMenu()">
+                <i class="fas fa-envelope"></i>
+                <span>Contact Me</span>
+            </a>
+        </div>
+    </div>
+
     <div class="icon icon-1" data-icon="&#xf108;" data-icon-alt="&#xf109;"></div>
     <div class="icon icon-2" data-icon="&#xf121;" data-icon-alt="&#xf1c9;"></div>
     <div class="icon icon-3" data-icon="&#xf085;" data-icon-alt="&#xf013;"></div>
@@ -78,7 +114,7 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                       As a Computer Science graduate, I combine technical expertise with creative problem-solving skill to build efficient and innovative solutions. My foundation in software development drives me to dissect complex challenges whether in algorithms, applications, or collaborative projects and writing in clean, scalable code. I thrive in team environments where ideas evolve. I prefer learning from others while contributing my own perspective. Beyond technical skills, I’m passionate about technology’s potential to create meaningful impact. Adaptable and curious, I embrace continuous learning to stay ahead in this fast-evolving field, always eager to take on new challenges that drive progress and growth.
+                       As a Computer Science graduate, I combine technical expertise with creative problem-solving skill to build efficient and innovative solutions. My foundation in software development drives me to dissect complex challenges whether in algorithms, applications, or collaborative projects and writing in clean, scalable code. I thrive in team environments where ideas evolve. I prefer learning from others while contributing my own perspective. Beyond technical skills, I'm passionate about technology's potential to create meaningful impact. Adaptable and curious, I embrace continuous learning to stay ahead in this fast-evolving field, always eager to take on new challenges that drive progress and growth.
                     </p>
                     <a href="#contact" class="btn">Contact Me</a>
                 </div>
@@ -109,10 +145,10 @@
                     <i class="fas fa-brain"></i>
                     <h3>Machine Learning</h3>
                 </div>
-				<div class="skill-item">
-					<i class="fa-solid fa-draw-polygon"></i>
-					<h3>Tensorflow</h3>
-				</div>	
+                <div class="skill-item">
+                    <i class="fa-solid fa-draw-polygon"></i>
+                    <h3>Tensorflow</h3>
+                </div>	
                 <div class="skill-item">
                     <i class="fas fa-laptop-code"></i>
                     <h3>Web Development</h3>
@@ -121,10 +157,10 @@
                     <i class="fa-brands fa-react"></i>
                     <h3>React</h3>
                 </div>
-				<div class="skill-item">
-					<i class="fa-brands fa-html5"></i>
-					<h3>HTML 5 & CSS</h3>
-				</div>		
+                <div class="skill-item">
+                    <i class="fa-brands fa-html5"></i>
+                    <h3>HTML 5 & CSS</h3>
+                </div>		
                 <div class="skill-item">
                     <i class="fas fa-code-branch"></i>
                     <h3>Laravel</h3>
@@ -133,10 +169,10 @@
                     <i class="fa-solid fa-flask"></i>
                     <h3>Flask</h3>
                 </div>				
-				<div class="skill-item">
-					<i class="fas fa-tasks"></i>
-					<h3>SDLC</h3>
-				</div>				
+                <div class="skill-item">
+                    <i class="fas fa-tasks"></i>
+                    <h3>SDLC</h3>
+                </div>				
                 <div class="skill-item">
                     <i class="fas fa-robot"></i>
                     <h3>Artificial Intelligence</h3>
@@ -149,18 +185,18 @@
                     <i class="fas fa-paint-brush"></i>
                     <h3>Adobe Creative</h3>
                 </div>
-				<div class="skill-item">
-					<i class="fas fa-file-alt"></i>
-					<h3>Office 365</h3>
-				</div>
-				<div class="skill-item">
-					<i class="fa-brands fa-microsoft"></i>
-					<h3>Windows</h3>
-				</div>
-				<div class="skill-item">
-					<i class="fa-brands fa-linux"></i>
-					<h3>Linux</h3>
-				</div>
+                <div class="skill-item">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Office 365</h3>
+                </div>
+                <div class="skill-item">
+                    <i class="fa-brands fa-microsoft"></i>
+                    <h3>Windows</h3>
+                </div>
+                <div class="skill-item">
+                    <i class="fa-brands fa-linux"></i>
+                    <h3>Linux</h3>
+                </div>
                 <div class="skill-item">
                     <i class="fas fa-lightbulb"></i>
                     <h3>Problem Solving</h3>
@@ -184,7 +220,7 @@
                 <div class="education-item">
                     <img src="uni.png" alt="Brac University" class="institute-icon">
                     <h3>Brac University</h3>
-                    <p>Bachelor’s Degree in Computer Science and Engineering</p>
+                    <p>Bachelor's Degree in Computer Science and Engineering</p>
                     <p>Graduation: 2024</p> 
                 </div>
                 <div class="education-item">
@@ -197,7 +233,7 @@
                     <img src="scl.png" alt="Rajdhani Ideal School" class="institute-icon">
                     <h3>Rajdhani Ideal School</h3>
                     <p>Secondary School Certificate (SSC)</p>
-                    <p>Sesssion: 2017</p>
+                    <p>Session: 2017</p>
                 </div>
             </div>
         </div>
@@ -208,9 +244,19 @@
             <h2>Experience</h2>
             <div class="experience-grid">
                 <div class="experience-item">
+                    <h3>Apon family mart, Mashallah Group</h3>
+                    <p>It executive</p>
+					<p>Server and infrastructure maintenance</p>
+                    <p>August 2025 - Ongoing</p>
+                    <ul>
+                        <li>Managed IT operations and infrastructure for secure, reliable processes</li>
+                        <li>Optimized systems to reduce downtime and boost efficiency</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
                     <h3>G2i inc.</h3>
                     <p>RLHF code reviewer</p>
-                    <p>November 2024 - April 2025</p>
+                    <p>November 2024 - June 2025</p>
                     <ul>
                         <li>GenAi development via reinforcement learning from human feedback.</li>
                         <li>Collaborated with the Ai development team to ensure smooth functionality.</li>
@@ -222,7 +268,7 @@
                     <p>May 2023 - November 2023</p>
                     <ul>
                         <li>Written scripts for laptop products.</li>
-                        <li>Collaborated with the writing team to ensure a thorough review..</li>
+                        <li>Collaborated with the writing team to ensure a thorough review.</li>
                     </ul>
                 </div>
             </div>
@@ -235,34 +281,37 @@
             <div class="projects-grid">
                 <div class="project-item">
                     <h3>GAN-based Super-Resolution</h3>
-                    <p>Developed a GAN-based model for single-image super-resolution, utilizing a custom Generative Adversarial Network (GAN) tailored to meet specific requirements. The custom model, named MSRGAN, was implemented using Python and TensorFlow.</p>
-                    <a href="https://github.com/Adib1133/Thesis" class="btn">View Project</a>
+                    <button class="btn view-more-btn" onclick="openModal('project1')">View More</button>
                 </div>
                 <div class="project-item">
                     <h3>Hate Speech Detection</h3>
-                    <p>Developed and deployed a Python-based algorithm designed to detect hate speech on social media platforms, specifically Twitter. The model leverages Logistic Regression and Naïve Bayes techniques and is entirely implemented using Python programming.</p>
-                    <a href="https://github.com/Adib1133/Hate-Speech-Detection" class="btn">View Project</a>
+                    <button class="btn view-more-btn" onclick="openModal('project2')">View More</button>
                 </div>
                 <div class="project-item">
                     <h3>E-Commerce Medicine Store</h3>
-                    <p>Developed an e-commerce medicine store as an academic project. The website is built using the Laravel framework and it's based on PHP, MySQL, HTML, and CSS </p>
-					<a href="https://github.com/Adib1133/Websites" class="btn">View Project</a>
+                    <button class="btn view-more-btn" onclick="openModal('project3')">View More</button>
                 </div>
                 <div class="project-item">
                     <h3>Stock Market Prediction</h3>
-                    <p>Utilized Monte Carlo Simulation to predict stock market trends, specifically focusing on Samsung Electronics Inc. The simulation was developed using Python programming, with datasets sourced from Yahoo Finance. </p>
-                    <a href="https://github.com/Adib1133/Predicting-Stock-Market-Trends-through-Monte-Carlo-Simulation" class="btn">View Project</a>
+                    <button class="btn view-more-btn" onclick="openModal('project4')">View More</button>
                 </div>
                 <div class="project-item">
                     <h3>Event Management System</h3>
-                    <p>Developed a dynamic Event Management System using Vue.js, HTML, CSS, and JavaScript with a responsive Bootstrap design. The platform features interactive event filtering, real-time password validation, and a registration form with dynamic dropdowns.</p>
-                    <a href="https://github.com/Adib1133/Interface-Design" class="btn">View Project</a>
+                    <button class="btn view-more-btn" onclick="openModal('project5')">View More</button>
                 </div>				
-				
-				
             </div>
         </div>
     </section>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content" id="modalContent">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div id="modalBody">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
 
     <section id="contact" class="contact-section">
         <div class="container">
@@ -290,7 +339,7 @@
                 <a href="Resume.pdf" download class="download-btn">
                     <i class="fas fa-download"></i> Download CV
                 </a>
-                <span class="download-pun">All my details are already provided here. Do you still need to download my CV?😉</span>
+                <span class="download-pun">All my details are already provided here. Do you still need to download my CV? 😉</span>
             </div>
         </div>
     </section>
@@ -307,32 +356,6 @@
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        ScrollReveal().reveal('.home-content, .about-content, .skills-grid, .education-grid, .experience-grid, .projects-grid, .contact-content', {
-            delay: 100,
-            distance: '50px',
-            origin: 'bottom',
-            duration: 500,
-            easing: 'ease-in-out',
-            reset: true
-        });
-        particlesJS.load('particles-js', 'particles.json', function() {
-            console.log('Particles.js loaded!');
-        });
-
-        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-        window.onscroll = function() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollToTopBtn.style.display = "block";
-            } else {
-                scrollToTopBtn.style.display = "none";
-            }
-        };
-
-        scrollToTopBtn.addEventListener("click", function() {
-            document.body.scrollTop = 0; 
-            document.documentElement.scrollTop = 0;
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
