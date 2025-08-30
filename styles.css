@@ -32,7 +32,9 @@ body {
 }
 
 /* Typography */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Merriweather', serif;
     font-weight: 700;
 }
@@ -83,35 +85,138 @@ h2::after {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    25% { transform: translateY(-15px) rotate(5deg); }
-    50% { transform: translateY(-30px) rotate(0deg); }
-    75% { transform: translateY(-15px) rotate(-5deg); }
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(-15px) rotate(-5deg);
+    }
 }
 
 @keyframes changeIcon {
-    0%, 45% { opacity: 1; }
-    50%, 95% { opacity: 0.7; }
-    100% { opacity: 1; }
+
+    0%,
+    45% {
+        opacity: 1;
+    }
+
+    50%,
+    95% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 /* Icon Positions */
-.icon-1 { top: 15%; left: 8%; animation-delay: 0s; }
-.icon-2 { top: 25%; left: 18%; animation-delay: 1s; }
-.icon-3 { top: 35%; left: 12%; animation-delay: 2s; }
-.icon-4 { top: 45%; left: 6%; animation-delay: 3s; }
-.icon-5 { top: 55%; left: 22%; animation-delay: 4s; }
-.icon-6 { top: 65%; left: 14%; animation-delay: 5s; }
-.icon-7 { top: 75%; left: 20%; animation-delay: 6s; }
-.icon-8 { top: 85%; left: 10%; animation-delay: 7s; }
-.icon-9 { top: 15%; right: 8%; animation-delay: 8s; }
-.icon-10 { top: 25%; right: 18%; animation-delay: 9s; }
-.icon-11 { top: 35%; right: 12%; animation-delay: 10s; }
-.icon-12 { top: 45%; right: 6%; animation-delay: 11s; }
-.icon-13 { top: 55%; right: 22%; animation-delay: 0.5s; }
-.icon-14 { top: 65%; right: 14%; animation-delay: 1.5s; }
-.icon-15 { top: 75%; right: 20%; animation-delay: 2.5s; }
-.icon-16 { top: 85%; right: 10%; animation-delay: 3.5s; }
+.icon-1 {
+    top: 15%;
+    left: 8%;
+    animation-delay: 0s;
+}
+
+.icon-2 {
+    top: 25%;
+    left: 18%;
+    animation-delay: 1s;
+}
+
+.icon-3 {
+    top: 35%;
+    left: 12%;
+    animation-delay: 2s;
+}
+
+.icon-4 {
+    top: 45%;
+    left: 6%;
+    animation-delay: 3s;
+}
+
+.icon-5 {
+    top: 55%;
+    left: 22%;
+    animation-delay: 4s;
+}
+
+.icon-6 {
+    top: 65%;
+    left: 14%;
+    animation-delay: 5s;
+}
+
+.icon-7 {
+    top: 75%;
+    left: 20%;
+    animation-delay: 6s;
+}
+
+.icon-8 {
+    top: 85%;
+    left: 10%;
+    animation-delay: 7s;
+}
+
+.icon-9 {
+    top: 15%;
+    right: 8%;
+    animation-delay: 8s;
+}
+
+.icon-10 {
+    top: 25%;
+    right: 18%;
+    animation-delay: 9s;
+}
+
+.icon-11 {
+    top: 35%;
+    right: 12%;
+    animation-delay: 10s;
+}
+
+.icon-12 {
+    top: 45%;
+    right: 6%;
+    animation-delay: 11s;
+}
+
+.icon-13 {
+    top: 55%;
+    right: 22%;
+    animation-delay: 0.5s;
+}
+
+.icon-14 {
+    top: 65%;
+    right: 14%;
+    animation-delay: 1.5s;
+}
+
+.icon-15 {
+    top: 75%;
+    right: 20%;
+    animation-delay: 2.5s;
+}
+
+.icon-16 {
+    top: 85%;
+    right: 10%;
+    animation-delay: 3.5s;
+}
 
 /* Mobile Menu */
 .mobile-menu {
@@ -241,9 +346,17 @@ h2::after {
 }
 
 @keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .home-content h1 {
@@ -270,9 +383,20 @@ h2::after {
 }
 
 @keyframes flipText {
-    0%, 40% { transform: rotateX(0deg); }
-    50%, 90% { transform: rotateX(180deg); }
-    100% { transform: rotateX(0deg); }
+
+    0%,
+    40% {
+        transform: rotateX(0deg);
+    }
+
+    50%,
+    90% {
+        transform: rotateX(180deg);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
 }
 
 .flip-text .front,
@@ -350,8 +474,8 @@ h2::after {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 
-                0 0 0 1px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
     position: relative;
     overflow: hidden;
 }
@@ -388,7 +512,7 @@ h2::after {
     color: rgba(255, 255, 255, 0.95);
     border: 1px solid rgba(0, 173, 181, 0.3);
     box-shadow: 0 8px 30px rgba(0, 173, 181, 0.2),
-                0 0 0 1px rgba(0, 173, 181, 0.1);
+        0 0 0 1px rgba(0, 173, 181, 0.1);
     transform: translateY(-2px);
 }
 
@@ -590,11 +714,9 @@ h2::after {
 }
 
 .institute-icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
-    object-fit: contain;
-    transition: transform 0.3s ease;
+    width: relative;
+    height: 50px;
+    margin-bottom: 10px;
 }
 
 .education-item:hover .institute-icon {
@@ -1005,7 +1127,8 @@ h2::after {
 /* Scroll to Top Button */
 /* Scroll to Top Button */
 #scrollToTopBtn {
-    display: none; /* This ensures it's hidden initially */
+    display: none;
+    /* This ensures it's hidden initially */
     position: fixed;
     bottom: 25px;
     right: 25px;
@@ -1036,7 +1159,7 @@ body.modal-open {
     overflow: hidden;
 }
 
-body.modal-open > *:not(.modal-overlay) {
+body.modal-open>*:not(.modal-overlay) {
     filter: blur(3px);
     transition: filter 0.3s ease;
 }
@@ -1339,17 +1462,18 @@ body.modal-open > *:not(.modal-overlay) {
     html {
         scroll-behavior: smooth;
     }
-    
+
     /* Prevent scroll restoration on page load */
-    html, body {
+    html,
+    body {
         scroll-behavior: auto;
     }
-    
+
     /* Re-enable smooth scrolling after page load */
     html.loaded {
         scroll-behavior: smooth;
     }
-    
+
     .skill-item,
     .education-item,
     .experience-item,
@@ -1358,13 +1482,30 @@ body.modal-open > *:not(.modal-overlay) {
         opacity: 0;
         transform: translateY(30px);
     }
-    
-    .skill-item:nth-child(1) { animation-delay: 0.1s; }
-    .skill-item:nth-child(2) { animation-delay: 0.2s; }
-    .skill-item:nth-child(3) { animation-delay: 0.3s; }
-    .skill-item:nth-child(4) { animation-delay: 0.4s; }
-    .skill-item:nth-child(5) { animation-delay: 0.5s; }
-    .skill-item:nth-child(6) { animation-delay: 0.6s; }
+
+    .skill-item:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    .skill-item:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .skill-item:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+
+    .skill-item:nth-child(4) {
+        animation-delay: 0.4s;
+    }
+
+    .skill-item:nth-child(5) {
+        animation-delay: 0.5s;
+    }
+
+    .skill-item:nth-child(6) {
+        animation-delay: 0.6s;
+    }
 }
 
 @keyframes fadeInUp {
