@@ -1003,8 +1003,9 @@ h2::after {
 }
 
 /* Scroll to Top Button */
+/* Scroll to Top Button */
 #scrollToTopBtn {
-    display: none;
+    display: none; /* This ensures it's hidden initially */
     position: fixed;
     bottom: 25px;
     right: 25px;
@@ -1021,7 +1022,6 @@ h2::after {
     box-shadow: 0 4px 15px rgba(0, 173, 181, 0.3);
     width: 50px;
     height: 50px;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
