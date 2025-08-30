@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto+Mono:wght@500&family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+	<script>
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+	</script>
 </head>
 <body>
     <div id="particles-js"></div>
@@ -218,19 +223,25 @@
             <h2>Education</h2>
             <div class="education-grid">
                 <div class="education-item">
-                    <img src="uni.png" alt="Brac University" class="institute-icon">
+					<a href="https://www.bracu.ac.bd/" target="_blank">
+						<img src="uni.png" alt="Brac University" class="institute-icon">
+					</a>
                     <h3>Brac University</h3>
                     <p>Bachelor's Degree in Computer Science and Engineering</p>
                     <p>Graduation: 2024</p> 
                 </div>
                 <div class="education-item">
-                    <img src="clg.png" alt="Dhaka Imperial College" class="institute-icon">
+					<a href="https://imperialcollege.edu.bd/" target="_blank">
+						<img src="clg.png" alt="Dhaka Imperial College" class="institute-icon">
+					</a>
                     <h3>Dhaka Imperial College</h3>
                     <p>Higher Secondary Certificate (HSC)</p>
                     <p>Session: 2019</p>
                 </div>
                 <div class="education-item">
-                    <img src="scl.png" alt="Rajdhani Ideal School" class="institute-icon">
+					<a href="https://www.rajdhaniidealcollege.edu.bd/" target="_blank">
+						<img src="scl.png" alt="Rajdhani Ideal School" class="institute-icon">
+					</a>
                     <h3>Rajdhani Ideal School</h3>
                     <p>Secondary School Certificate (SSC)</p>
                     <p>Session: 2017</p>
@@ -244,7 +255,9 @@
             <h2>Experience</h2>
             <div class="experience-grid">
                 <div class="experience-item">
-					<img src="mg.png" alt="Brac University" class="institute-icon">
+					<a href="https://mg-bd.com/" target="_blank">
+						<img src="mg.png" alt="mg" class="institute-icon">
+					</a>
                     <h3>Apon family mart, Mashallah Group</h3>
                     <p>It executive</p>
 					<p>Server and infrastructure maintenance</p>
@@ -255,7 +268,9 @@
                     </ul>
                 </div>
                 <div class="experience-item">
-					<img src="g2.png" alt="Brac University" class="institute-icon">
+					<a href="https://www.g2i.co/about" target="_blank">
+						<img src="g2.png" alt="g2" class="institute-icon">
+					</a>
                     <h3>G2i inc.</h3>
                     <p>RLHF code reviewer</p>
                     <p>November 2024 - June 2025</p>
@@ -265,7 +280,9 @@
                     </ul>
                 </div>
                 <div class="experience-item">
-					<img src="atc.png" alt="Brac University" class="institute-icon">
+					<a href="https://www.youtube.com/channel/UCMYuF0mNxTgOzr1lS7opIBQ" target="_blank">
+						<img src="atc.png" alt="atc" class="institute-icon">
+					</a>
                     <h3>ATC Android ToTo Company</h3>
                     <p>Script Writer</p>
                     <p>May 2023 - November 2023</p>
@@ -282,25 +299,61 @@
         <div class="container">
             <h2>Projects</h2>
             <div class="projects-grid">
-                <div class="project-item">
-                    <h3>GAN-based Super-Resolution</h3>
-                    <button class="btn view-more-btn" onclick="openModal('project1')">View More</button>
+				<div class="project-item">
+                    <h3>Single Image Super-Resolution</h3>
+				    <ul>
+                        <p>Skills: Deep Learning, GANs, TensorFlow, PyTorch</p>
+                    </ul>
+                    <button class="btn view-more-btn" onclick="openModal('project6')">View More</button>
                 </div>
                 <div class="project-item">
-                    <h3>Hate Speech Detection</h3>
+                    <h3>Healthcare Landing Page</h3>
+				    <ul>
+                        <p>Tech stack: Angular, TypeScript, CSS, JavaScript</p>
+                    </ul>
                     <button class="btn view-more-btn" onclick="openModal('project2')">View More</button>
                 </div>
                 <div class="project-item">
-                    <h3>E-Commerce Medicine Store</h3>
-                    <button class="btn view-more-btn" onclick="openModal('project3')">View More</button>
+                    <h3>Klinik-24</h3>
+				    <ul>
+                        <p>Tech stack: React, TypeScript, ESLint, CSS, JavaScript</p>
+                    </ul>
+                    <button class="btn view-more-btn" onclick="openModal('project1')">View More</button>
                 </div>
                 <div class="project-item">
-                    <h3>Stock Market Prediction</h3>
+                    <h3>Stock Market Trend Simulation</h3>
+				    <ul>
+                        <p>Skills: Python, Simulation & Modeling</p>
+                    </ul>
+                    <button class="btn view-more-btn" onclick="openModal('project5')">View More</button>
+                </div>
+                <div class="project-item">
+                    <h3>Hate Speech Detection</h3>
+				    <ul>
+                        <p>Skills: Python, Machine Learning, NLP</p>
+                    </ul>
                     <button class="btn view-more-btn" onclick="openModal('project4')">View More</button>
                 </div>
                 <div class="project-item">
-                    <h3>Event Management System</h3>
-                    <button class="btn view-more-btn" onclick="openModal('project5')">View More</button>
+                    <h3>Interface Design</h3>
+				    <ul>
+                        <p>Tech stack: Vue, HTML, CSS, JavaScript</p>
+                    </ul>	
+                    <button class="btn view-more-btn" onclick="openModal('project7')">View More</button>
+                </div>
+                <div class="project-item">
+                    <h3>E-Commerce Medicine Store</h3>
+				    <ul>
+                        <p>Tech stack: PHP, Laravel, MySQL, CSS, JavaScript</p>
+                    </ul>
+                    <button class="btn view-more-btn" onclick="openModal('project3')">View More</button>
+                </div>
+                <div class="project-item">
+                    <h3>Road Safety Animation</h3>
+				    <ul>
+                        <p>Tech stack: Python, PyOpenGL, GLUT, TypeScript</p>
+                    </ul>
+                    <button class="btn view-more-btn" onclick="openModal('project8')">View More</button>
                 </div>				
             </div>
         </div>
@@ -359,6 +412,6 @@
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
