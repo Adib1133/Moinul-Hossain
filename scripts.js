@@ -1,13 +1,13 @@
 const projects = {
             project1: {
-                title: "Klinik-24 — React, TypeScript, Vite",
+                title: "Klinik-24",
                 description: "<ul><li>Developed a web application for a healthcare platform using a modern front-end setup</li><li>Structured for fast local DX (Vite) and maintainability (TS, module aliases).</li></ul>",
                 githubLink: "https://github.com/Adib1133/Klinik-24"
             },
             project2: {
-                title: "Healthcare Landing Page — Angular",
+                title: "Healthcare Landing Page",
                 description: "<ul><li> Designed and developed a responsive landing page for a healthcare platform, recreated from a Figma design file.</li><li>Ensured accessibility and mobile performance.</li></ul>",
-                githubLink: "https://github.com/Adib1133/Healthcare-Landing-Page"
+                githubLink: "https://github.com/Adib1133/klinik24-landing"
             },
             project3: {
                 title: "E-Commerce Medicine Store — PHP (Laravel), MySQL",
@@ -25,19 +25,19 @@ const projects = {
                 githubLink: "https://github.com/Adib1133/Predicting-Stock-Market-Trends-through-Monte-Carlo-Simulation"
             },
             project6: {
-                title: "Single Image Super-Resolution (Thesis) — MSRGAN, TensorFlow/PyTorch",
+                title: "Single Image Super-Resolution",
                 description: "<ul><li>Implemented an MSRGAN pipeline optimized for consumer GPUs; used DIV2K dataset with a custom training regime.</li><li>Implemented MSRGAN-based GAN model for image super-resolution</li></ul>",
                 githubLink: "https://github.com/Adib1133/Thesis"
             },
             project7: {
-                title: "Interface Design — Vue",
+                title: "Interface Design",
                 description: "<ul><li>Designed and developed a user interface project focused on creating intuitive and visually appealing designs</li></ul>",
                 githubLink: "https://github.com/Adib1133/Interface-Design"
             },
             project8: {
-                title: "Road Safety Animation — Python, PyOpenGL, GLUT",
+                title: "Road Safety Animation",
                 description: "<ul><li>Coded 2D animation using Midpoint algorithms for line/circle rasterization; implemented scene graph and input handling.</li><li>Optimized render loop for smooth performance on low-end hardware.</li></ul>",
-                githubLink: "https://github.com/Adib1133/Road-Safety-Animation"
+                githubLink: "https://github.com/Adib1133/2d-Animation"
             }
         };
 
