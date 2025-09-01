@@ -379,12 +379,13 @@
                     <a href="https://github.com/Adib1133" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="https://x.com/AdibHossain16" target="_blank"><i class="fab fa-twitter"></i></a>
                 </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" required></textarea>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" id="userName" name="user_name" placeholder="Your Name" required>
+                    <input type="email" id="userEmail" name="user_email" placeholder="Your Email" required>
+                    <textarea id="userMessage" name="message" placeholder="Your Message" required></textarea>
                     <button type="submit" class="btn">Send Message</button>
                 </form>
+                <div id="statusMessage" class="status-message"></div>
             </div>
         </div>
     </section>
@@ -412,6 +413,7 @@
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
