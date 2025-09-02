@@ -54,8 +54,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-
-// Rest of your existing scripts.js code remains the same...
 // Mobile Menu Functionality
 function toggleMobileMenu() {
     const mobileNavMenu = document.getElementById('mobileNavMenu');
@@ -116,26 +114,47 @@ const projects = {
     }
 };
 
+// Optimized modal functions
 function openModal(projectId) {
     const project = projects[projectId];
     const modalBody = document.getElementById('modalBody');
+    const modalOverlay = document.getElementById('modalOverlay');
 
-    modalBody.innerHTML = `
-                <h3>${project.title}</h3>
-                ${project.description}
-                <a href="${project.githubLink}" target="_blank" class="github-link-btn">
-                    <i class="fab fa-github"></i>
-                    View on GitHub
-                </a>
-            `;
+    // Use requestAnimationFrame for smoother animations
+    requestAnimationFrame(() => {
+        modalBody.innerHTML = `
+            <h3>${project.title}</h3>
+            ${project.description}
+            <a href="${project.githubLink}" target="_blank" class="github-link-btn">
+                <i class="fab fa-github"></i>
+                View on GitHub
+            </a>
+        `;
 
-    document.getElementById('modalOverlay').classList.add('active');
-    document.body.classList.add('modal-open');
+        modalOverlay.classList.add('active');
+        document.body.classList.add('modal-open');
+        
+        // Disable particles animation temporarily for better performance
+        const particlesCanvas = document.querySelector('#particles-js canvas');
+        if (particlesCanvas) {
+            particlesCanvas.style.animationPlayState = 'paused';
+        }
+    });
 }
 
 function closeModal() {
-    document.getElementById('modalOverlay').classList.remove('active');
-    document.body.classList.remove('modal-open');
+    const modalOverlay = document.getElementById('modalOverlay');
+    
+    requestAnimationFrame(() => {
+        modalOverlay.classList.remove('active');
+        document.body.classList.remove('modal-open');
+        
+        // Re-enable particles animation
+        const particlesCanvas = document.querySelector('#particles-js canvas');
+        if (particlesCanvas) {
+            particlesCanvas.style.animationPlayState = 'running';
+        }
+    });
 }
 
 // Close modal when clicking outside
@@ -152,30 +171,47 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
-// ScrollReveal animations
+// Optimized ScrollReveal animations with reduced complexity
 ScrollReveal().reveal('.home-content, .about-content, .skills-grid, .education-grid, .experience-grid, .projects-grid, .contact-content', {
-    delay: 100,
-    distance: '50px',
+    delay: 50,
+    distance: '30px',
     origin: 'bottom',
-    duration: 500,
-    easing: 'ease-in-out',
-    reset: true
+    duration: 400,
+    easing: 'ease-out',
+    reset: false, // Changed to false to prevent repeated animations
+    viewFactor: 0.2
 });
 
-// Initialize particles
+// Initialize particles with performance optimization
 particlesJS.load('particles-js', 'particles.json', function () {
     console.log('particles.json loaded...');
+    
+    // Optimize particles performance
+    const particlesCanvas = document.querySelector('#particles-js canvas');
+    if (particlesCanvas) {
+        // Use will-change for better GPU acceleration
+        particlesCanvas.style.willChange = 'transform';
+    }
 });
 
-// Scroll to top functionality
+// Throttled scroll to top functionality
+let scrollTimeout;
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-window.onscroll = function () {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollToTopBtn.style.display = "block";
-    } else {
-        scrollToTopBtn.style.display = "none";
+
+window.addEventListener('scroll', function() {
+    // Throttle scroll events for better performance
+    if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
     }
-};
+    
+    scrollTimeout = setTimeout(() => {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    }, 10);
+}, { passive: true });
 
 scrollToTopBtn.addEventListener("click", function () {
     // Smooth scroll to top
@@ -185,44 +221,62 @@ scrollToTopBtn.addEventListener("click", function () {
     });
 });
 
-// Mobile menu functionality
+// Mobile menu functionality with performance optimization
 function toggleMobileMenu() {
     const menu = document.getElementById('mobileNavMenu');
     const menuToggle = document.querySelector('.menu-toggle');
 
-    menu.classList.toggle('active');
-    menuToggle.classList.toggle('active');
+    requestAnimationFrame(() => {
+        menu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    });
 }
 
 function closeMobileMenu() {
     const menu = document.getElementById('mobileNavMenu');
     const menuToggle = document.querySelector('.menu-toggle');
 
-    menu.classList.remove('active');
-    menuToggle.classList.remove('active');
-}
-
-// Close mobile menu when clicking outside
-document.addEventListener('click', function (event) {
-    const menu = document.getElementById('mobileNavMenu');
-    const menuToggle = document.querySelector('.menu-toggle');
-
-    if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+    requestAnimationFrame(() => {
         menu.classList.remove('active');
         menuToggle.classList.remove('active');
+    });
+}
+
+// Optimized click outside handler
+let clickTimeout;
+document.addEventListener('click', function (event) {
+    if (clickTimeout) {
+        clearTimeout(clickTimeout);
     }
+    
+    clickTimeout = setTimeout(() => {
+        const menu = document.getElementById('mobileNavMenu');
+        const menuToggle = document.querySelector('.menu-toggle');
+
+        if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+            menu.classList.remove('active');
+            menuToggle.classList.remove('active');
+        }
+    }, 10);
 });
 
-// Smooth scrolling for navigation links
+// Optimized smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            requestAnimationFrame(() => {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             });
         }
     });
+});
+
+// Performance optimization: Enable smooth scrolling after page load
+window.addEventListener('load', function() {
+    document.documentElement.classList.add('loaded');
 });
