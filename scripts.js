@@ -111,7 +111,17 @@ const projects = {
         title: "Road Safety Animation",
         description: "<ul><li>Coded 2D animation using Midpoint algorithms for line/circle rasterization; implemented scene graph and input handling.</li><li>Optimized render loop for smooth performance on low-end hardware.</li></ul>",
         githubLink: "https://github.com/Adib1133/2d-Animation"
-    }
+    },
+    project9: {
+        title: "MediCare Plus",
+        description: "<ul><li>Beautiful, responsive UI with modern gradients and animations with CRUD functionality</li><li>Secure authentication with role-based access control with complete clinic information customization</li></ul>",
+        githubLink: "https://github.com/Adib1133/Medicare#-tech-stack"
+    },
+    project10: {
+        title: "Aura Weather App",
+        description: "<ul><li>A visually stunning interface with frosted glass panels, modern typography, and floating gradient orbs.</li><li>Accurate, up-to-the-minute weather data including temperature, humidity, wind speed, and pressure.</li></ul>",
+        githubLink: "https://github.com/Adib1133/Aura-Weather"
+    },
 };
 
 // Optimized modal functions
