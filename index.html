@@ -1,433 +1,729 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="icon" href="https://i.ibb.co.com/YBXfF8QT/ogo.png" type="image/png">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moinul Hossain - Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto+Mono:wght@500&family=Oswald:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-	<script>
-    if ('scrollRestoration' in history) {
-        history.scrollRestoration = 'manual';
-    }
-	</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moinul Hossain - System Engineer & Gamer</title>
+  <meta name="description" content="Portfolio of Moinul Hossain - System Engineer, developer, AI enthusiast, and gamer based in Dhaka, Bangladesh.">
+  <meta name="theme-color" content="#030712">
+  <meta property="og:title" content="Moinul Hossain - System Engineer & Gamer">
+  <meta property="og:description" content="Systems, software, AI/ML projects, education, experience, and gaming profiles from Moinul Hossain.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/profile.jpeg">
+  <link rel="icon" href="https://i.ibb.co.com/YBXfF8QT/ogo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div id="particles-js"></div>
-    
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <button class="menu-toggle" onclick="toggleMobileMenu()">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-        </button>
-        <div class="mobile-nav-menu" id="mobileNavMenu">
-            <a href="#about" class="nav-item" onclick="closeMobileMenu()">
-                <i class="fas fa-user"></i>
-                <span>About Me</span>
-            </a>
-            <a href="#skills" class="nav-item" onclick="closeMobileMenu()">
-                <i class="fas fa-cogs"></i>
-                <span>Skills</span>
-            </a>
-            <a href="#education" class="nav-item" onclick="closeMobileMenu()">
-                <i class="fas fa-graduation-cap"></i>
-                <span>Education</span>
-            </a>
-            <a href="#experience" class="nav-item" onclick="closeMobileMenu()">
-                <i class="fas fa-briefcase"></i>
-                <span>Experience</span>
-            </a>
-            <a href="#projects" class="nav-item" onclick="closeMobileMenu()">
-                <i class="fas fa-project-diagram"></i>
-                <span>Projects</span>
-            </a>
-            <a href="#contact" class="nav-item" onclick="closeMobileMenu()">
-                <i class="fas fa-envelope"></i>
-                <span>Contact Me</span>
-            </a>
-        </div>
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Loader -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-rings">
+        <div class="ring-outer"></div>
+        <div class="ring-inner"></div>
+        <i class="fas fa-microchip loader-icon"></i>
+      </div>
+      <div class="loader-text">INITIALIZING<span class="loader-dots">..</span></div>
     </div>
+  </div>
 
-    <div class="icon icon-1" data-icon="&#xf108;" data-icon-alt="&#xf109;"></div>
-    <div class="icon icon-2" data-icon="&#xf121;" data-icon-alt="&#xf1c9;"></div>
-    <div class="icon icon-3" data-icon="&#xf085;" data-icon-alt="&#xf013;"></div>
-    <div class="icon icon-4" data-icon="&#xf1c0;" data-icon-alt="&#xf233;"></div>
-    <div class="icon icon-5" data-icon="&#xf544;" data-icon-alt="&#xf2db;"></div>
-    <div class="icon icon-6" data-icon="&#xf11c;" data-icon-alt="&#xf120;"></div>
-    <div class="icon icon-7" data-icon="&#xf2db;" data-icon-alt="&#xf233;"></div>
-    <div class="icon icon-8" data-icon="&#xf233;" data-icon-alt="&#xf0c2;"></div>
-    <div class="icon icon-9" data-icon="&#xf109;" data-icon-alt="&#xf108;"></div>
-    <div class="icon icon-10" data-icon="&#xf1c9;" data-icon-alt="&#xf121;"></div>
-    <div class="icon icon-11" data-icon="&#xf6ff;" data-icon-alt="&#xf0c2;"></div>
-    <div class="icon icon-12" data-icon="&#xf188;" data-icon-alt="&#xf21b;"></div>
-    <div class="icon icon-13" data-icon="&#xf120;" data-icon-alt="&#xf11c;"></div>
-    <div class="icon icon-14" data-icon="&#xf201;" data-icon-alt="&#xf188;"></div>
-    <div class="icon icon-15" data-icon="&#xf0c2;" data-icon-alt="&#xf1c0;"></div>
-    <div class="icon icon-16" data-icon="&#xf21b;" data-icon-alt="&#xf544;"></div>
+  <!-- Cursor -->
+  <div id="cursor"></div>
+  <div id="cursor-follower"></div>
 
-    <section id="home" class="home-section">
-        <div class="container">
-            <div class="home-content">
-                <h1 class="animate__animated animate__fadeInDown">Hi, I'm Moinul Hossain.</h1>
-                <div class="flip-text-container animate__animated animate__fadeInUp">
-                    <div class="flip-text">
-                        <span class="front">You may also know me as Adib,</span>
-                        <span class="back">That is my nickname.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="logo-container">
-            <img src="logo.png" alt="Your Logo">
-        </div>
-        <div class="bottom-nav">
-            <a href="#about" class="nav-item">
-                <i class="fas fa-user"></i>
-                <span>About Me</span>
-            </a>
-            <a href="#skills" class="nav-item">
-                <i class="fas fa-cogs"></i>
-                <span>Skills</span>
-            </a>
-            <a href="#education" class="nav-item">
-                <i class="fas fa-graduation-cap"></i>
-                <span>Education</span>
-            </a>
-            <a href="#experience" class="nav-item">
-                <i class="fas fa-briefcase"></i>
-                <span>Experience</span>
-            </a>
-            <a href="#projects" class="nav-item">
-                <i class="fas fa-project-diagram"></i>
-                <span>Projects</span>
-            </a>
-            <a href="#contact" class="nav-item">
-                <i class="fas fa-envelope"></i>
-                <span>Contact Me</span>
-            </a>
-        </div>
-    </section>
-
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                       As a Computer Science graduate, I combine technical expertise with creative problem-solving skill to build efficient and innovative solutions. My foundation in software development drives me to dissect complex challenges whether in algorithms, applications, or collaborative projects and writing in clean, scalable code. I thrive in team environments where ideas evolve. I prefer learning from others while contributing my own perspective. Beyond technical skills, I'm passionate about technology's potential to create meaningful impact. Adaptable and curious, I embrace continuous learning to stay ahead in this fast-evolving field, always eager to take on new challenges that drive progress and growth.
-                    </p>
-                    <a href="#contact" class="btn">Contact Me</a>
-                </div>
-                <div class="about-image">
-                    <img src="profile.jpg" alt="Moinul Hossain">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <i class="fas fa-code"></i>
-                    <h3>Python</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-regular fa-file-code"></i>
-                    <h3>C++</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-database"></i>
-                    <h3>Data Structures</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-brain"></i>
-                    <h3>Machine Learning</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-solid fa-draw-polygon"></i>
-                    <h3>Tensorflow</h3>
-                </div>	
-                <div class="skill-item">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Web Development</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-brands fa-react"></i>
-                    <h3>React</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-brands fa-html5"></i>
-                    <h3>HTML 5 & CSS</h3>
-                </div>		
-                <div class="skill-item">
-                    <i class="fas fa-code-branch"></i>
-                    <h3>Laravel</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-solid fa-flask"></i>
-                    <h3>Flask</h3>
-                </div>				
-                <div class="skill-item">
-                    <i class="fas fa-tasks"></i>
-                    <h3>SDLC</h3>
-                </div>				
-                <div class="skill-item">
-                    <i class="fas fa-robot"></i>
-                    <h3>Artificial Intelligence</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-brands fa-github"></i>
-                    <h3>Git</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-paint-brush"></i>
-                    <h3>Adobe Creative</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-file-alt"></i>
-                    <h3>Office 365</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-brands fa-microsoft"></i>
-                    <h3>Microsoft Azure</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-brands fa-linux"></i>
-                    <h3>Linux</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-lightbulb"></i>
-                    <h3>Problem Solving</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-solid fa-gears"></i>
-                    <h3>Critical Thinking</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-project-diagram"></i>
-                    <h3>Project Management</h3>
-                </div>			
-            </div>
-        </div>
-    </section>
-
-    <section id="education" class="education-section">
-        <div class="container">
-            <h2>Education</h2>
-            <div class="education-grid">
-                <div class="education-item">
-					<a href="https://www.bracu.ac.bd/" target="_blank">
-						<img src="uni.png" alt="Brac University" class="institute-icon">
-					</a>
-                    <h3>Brac University</h3>
-                    <p>Bachelor's Degree in Computer Science and Engineering</p>
-                    <p>Graduation: 2024</p> 
-                </div>
-                <div class="education-item">
-					<a href="https://imperialcollege.edu.bd/" target="_blank">
-						<img src="clg.png" alt="Dhaka Imperial College" class="institute-icon">
-					</a>
-                    <h3>Dhaka Imperial College</h3>
-                    <p>Higher Secondary Certificate (HSC)</p>
-                    <p>Session: 2019</p>
-                </div>
-                <div class="education-item">
-					<a href="https://www.rajdhaniidealcollege.edu.bd/" target="_blank">
-						<img src="scl.png" alt="Rajdhani Ideal School" class="institute-icon">
-					</a>
-                    <h3>Rajdhani Ideal School</h3>
-                    <p>Secondary School Certificate (SSC)</p>
-                    <p>Session: 2017</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="experience-section">
-        <div class="container">
-            <h2>Experience</h2>
-            <div class="experience-grid">
-                <div class="experience-item">
-					<a href="https://mg-bd.com/" target="_blank">
-						<img src="mg.png" alt="mg" class="institute-icon">
-					</a>
-                    <h3>Mashallah Group</h3>
-                    <p>System Engineer, IT</p>
-					<p>Server and infrastructure maintenance</p>
-                    <p>August 2025 - Ongoing</p>
-                    <ul>
-                        <li>Managed IT operations and infrastructure for secure, reliable processes</li>
-                        <li>Optimized systems to reduce downtime and boost efficiency</li>
-                    </ul>
-                </div>
-                <div class="experience-item">
-					<a href="https://www.g2i.co/about" target="_blank">
-						<img src="g2.png" alt="g2" class="institute-icon">
-					</a>
-                    <h3>G2i inc.</h3>
-                    <p>RLHF code reviewer</p>
-                    <p>November 2024 - June 2025</p>
-                    <ul>
-                        <li>GenAi development via reinforcement learning from human feedback.</li>
-                        <li>Collaborated with the Ai development team to ensure smooth functionality.</li>
-                    </ul>
-                </div>
-                <div class="experience-item">
-					<a href="https://www.youtube.com/channel/UCMYuF0mNxTgOzr1lS7opIBQ" target="_blank">
-						<img src="atc.png" alt="atc" class="institute-icon">
-					</a>
-                    <h3>ATC Android ToTo Company</h3>
-                    <p>Script Writer</p>
-                    <p>May 2023 - November 2023</p>
-                    <ul>
-                        <li>Written scripts for laptop products.</li>
-                        <li>Collaborated with the writing team to ensure a thorough review.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-				<div class="project-item">
-                    <h3>Single Image Super-Resolution</h3>
-				    <ul>
-                        <p>Skills: Deep Learning, GANs, TensorFlow, PyTorch</p>
-                    </ul>
-                    <button class="btn view-more-btn" onclick="openModal('project6')">View More</button>
-                </div>
-                <div class="project-item">
-                    <h3>Healthcare Landing Page</h3>
-				    <ul>
-                        <p>Tech stack: Angular, TypeScript, CSS, JavaScript</p>
-                    </ul>
-                    <button class="btn view-more-btn" onclick="openModal('project2')">View More</button>
-                </div>
-                <div class="project-item">
-                    <h3>Klinik-24</h3>
-				    <ul>
-                        <p>Tech stack: React, TypeScript, ESLint, CSS, JavaScript</p>
-                    </ul>
-                    <button class="btn view-more-btn" onclick="openModal('project1')">View More</button>
-                </div>
-                <div class="project-item">
-                    <h3>Stock Market Trend Simulation</h3>
-				    <ul>
-                        <p>Skills: Python, Simulation & Modeling</p>
-                    </ul>
-                    <button class="btn view-more-btn" onclick="openModal('project5')">View More</button>
-                </div>
-                <div class="project-item">
-                    <h3>Hate Speech Detection</h3>
-				    <ul>
-                        <p>Skills: Python, Machine Learning, NLP</p>
-                    </ul>
-                    <button class="btn view-more-btn" onclick="openModal('project4')">View More</button>
-                </div>
-                <div class="project-item">
-                    <h3>Interface Design</h3>
-				    <ul>
-                        <p>Tech stack: Vue, HTML, CSS, JavaScript</p>
-                    </ul>	
-                    <button class="btn view-more-btn" onclick="openModal('project7')">View More</button>
-                </div>
-                <div class="project-item">
-                    <h3>E-Commerce Medicine Store</h3>
-				    <ul>
-                        <p>Tech stack: PHP, Laravel, MySQL, CSS, JavaScript</p>
-                    </ul>
-                    <button class="btn view-more-btn" onclick="openModal('project3')">View More</button>
-                </div>
-                <div class="project-item">
-                    <h3>Road Safety Animation</h3>
-				    <ul>
-                        <p>Tech stack: Python, PyOpenGL, GLUT, TypeScript</p>
-                    </ul>
-                    <button class="btn view-more-btn" onclick="openModal('project8')">View More</button>
-                </div>
-                <div class="project-item">
-                    <h3>Complete Clinic Management System</h3>
-				    <ul>
-                        <p>Tech stack: React.Js, Tailwind, MongoDB, NodeJS</p>
-                    </ul>
-                    <button class="btn view-more-btn" onclick="openModal('project9')">View More</button>
-                </div>
-                <div class="project-item">
-                    <h3>Minimalistic Weather App</h3>
-				    <ul>
-                        <p>Tech stack: Python, Flask, Requests, BigDataCloud Api, Open-Meteo API, JavaScript</p>
-                    </ul>
-                    <button class="btn view-more-btn" onclick="openModal('project10')">View More</button>
-                </div>					
-            </div>
-        </div>
-    </section>
-
-    <!-- Modal Overlay -->
-    <div class="modal-overlay" id="modalOverlay">
-        <div class="modal-content" id="modalContent">
-            <button class="modal-close" onclick="closeModal()">&times;</button>
-            <div id="modalBody">
-                <!-- Content will be dynamically inserted here -->
-            </div>
-        </div>
+  <!-- Navbar -->
+  <nav id="navbar" aria-label="Primary navigation">
+    <div class="nav-brand">
+      <span class="brand-bracket">&lt;</span>ADIB<span class="brand-bracket">/&gt;</span>
     </div>
-
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <div class="contact-content">
-                <p>Feel free to reach out to me for collaborations or just a friendly hello!</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/moinul-hossain-0200b4242/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/Adib1133" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://x.com/AdibHossain16" target="_blank"><i class="fab fa-twitter"></i></a>
-                </div>
-                <form class="contact-form" id="contactForm">
-                    <input type="text" id="userName" name="user_name" placeholder="Your Name" required>
-                    <input type="email" id="userEmail" name="user_email" placeholder="Your Email" required>
-                    <textarea id="userMessage" name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-                <div id="statusMessage" class="status-message"></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="download-cv-section">
-        <div class="container">
-            <div class="download-wrapper">
-                <a href="Resume.pdf" download class="download-btn">
-                    <i class="fas fa-download"></i> Download CV
-                </a>
-                <span class="download-pun">All my details are already provided here. Do you still need to download my CV? 😉</span>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 | Adib Hossain. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <button id="scrollToTopBtn" title="Go to top">
-        <i class="fas fa-arrow-up"></i>
+    <div class="nav-links">
+      <a href="#about" class="nav-link" data-section="about">About</a>
+      <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+      <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+      <a href="#education" class="nav-link" data-section="education">Education</a>
+      <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+      <a href="#gaming" class="nav-link" data-section="gaming">Hobby</a>
+      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false">
+      <span></span><span></span><span></span>
     </button>
+  </nav>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script src="scripts.js"></script>
+  <!-- Mobile Nav -->
+  <button class="mobile-nav-backdrop" id="navBackdrop" aria-label="Close menu"></button>
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <a href="#about" class="mob-link"><i class="fas fa-user"></i> About</a>
+    <a href="#skills" class="mob-link"><i class="fas fa-cogs"></i> Skills</a>
+    <a href="#projects" class="mob-link"><i class="fas fa-project-diagram"></i> Projects</a>
+    <a href="#education" class="mob-link"><i class="fas fa-graduation-cap"></i> Education</a>
+    <a href="#experience" class="mob-link"><i class="fas fa-briefcase"></i> Experience</a>
+    <a href="#gaming" class="mob-link"><i class="fas fa-gamepad"></i> Gaming</a>
+    <a href="#contact" class="mob-link"><i class="fas fa-envelope"></i> Contact</a>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">SYSTEM ENGINEER &middot; GAMER &middot; DEVELOPER</div>
+      <h1 class="hero-title">
+        <span class="hero-hi">Hi, I'm</span><br>
+        <span class="hero-name" id="heroName">Moinul Hossain</span>
+      </h1>
+      <div class="hero-alias">Also known as <span class="alias-highlight">Adib</span></div>
+      <p class="hero-desc">Building reliable IT systems, practical software, and AI-driven experiments with a calm, problem-first engineering mindset.</p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn-primary"><i class="fas fa-terminal"></i> View Projects</a>
+        <a href="mailto:adibhossain0077@gmail.com?subject=Portfolio%20Inquiry" class="btn-icon" aria-label="Email Moinul Hossain"><i class="fas fa-envelope"></i></a>
+      </div>
+      <div class="hero-meta">
+        <span><i class="fas fa-location-dot"></i> Dhaka, Bangladesh</span>
+        <span><i class="fas fa-circle-check"></i> Open to opportunities</span>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" data-target="12">0</span><span class="stat-label">Projects</span></div>
+        <div class="stat"><span class="stat-num" data-target="3">0</span><span class="stat-label">Roles</span></div>
+        <div class="stat"><span class="stat-num" data-target="2024">0</span><span class="stat-label">Graduate</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="profile-scene">
+        <div class="profile-ring ring-1"></div>
+        <div class="profile-ring ring-2"></div>
+        <div class="profile-ring ring-3"></div>
+        <div class="profile-img-wrap">
+          <img src="images/profile.jpeg" alt="Moinul Hossain" class="profile-img">
+          <div class="profile-glow"></div>
+        </div>
+        <div class="orbit-icon" style="--angle:0deg"><i class="fas fa-server"></i></div>
+        <div class="orbit-icon" style="--angle:72deg"><i class="fas fa-gamepad"></i></div>
+        <div class="orbit-icon" style="--angle:144deg"><i class="fas fa-brain"></i></div>
+        <div class="orbit-icon" style="--angle:216deg"><i class="fab fa-python"></i></div>
+        <div class="orbit-icon" style="--angle:288deg"><i class="fas fa-network-wired"></i></div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">01 / WHO AM I</span>
+        <h2 class="section-title">About</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-card reveal-left">
+          <div class="card-glow"></div>
+          <p>I’m Moinul Hossain (Adib), a System Engineer and developer based in Dhaka, Bangladesh. I hold a B.Sc. in Computer Science from BRAC University, where I built a strong foundation in algorithms, software engineering, and AI/ML.
+Currently, I manage IT infrastructure and ensure reliable branch operations at Mashallah Group. Before that, I refined AI models through reinforcement learning from human feedback as an RLHF Code Reviewer at G2i.
+My technical toolkit includes Python, React, Laravel, Flask, TensorFlow, Node.js, and cloud platforms like Microsoft Azure, with a focus on clean, scalable code. I’ve delivered projects ranging from full‑stack clinic management systems and e‑commerce platforms to hate‑speech detection, stock‑market simulations, and machine learning prototypes.</p>
+          <p style="margin-top:1rem">I’m driven by a problem‑first mindset and a passion for building practical, impactful solutions. I thrive in collaborative teams, constantly learning to stay ahead in fast‑evolving tech landscapes. I’m open to opportunities where I can combine systems thinking, development, and AI to create meaningful results.</p>
+          <div class="about-tags">
+            <span class="tag"><i class="fas fa-server"></i> System Engineer</span>
+            <span class="tag"><i class="fas fa-gamepad"></i> Gamer</span>
+            <span class="tag"><i class="fas fa-code"></i> Developer</span>
+            <span class="tag"><i class="fas fa-robot"></i> AI Enthusiast</span>
+          </div>
+          <a href="#contact" class="btn-primary inline-action">Get In Touch</a>
+        </div>
+        <div class="about-info-panel reveal-right">
+          <div class="info-item"><span class="info-key">Name</span><span class="info-val">Moinul Hossain (Adib)</span></div>
+          <div class="info-item"><span class="info-key">Role</span><span class="info-val">System Engineer, IT</span></div>
+          <div class="info-item"><span class="info-key">Degree</span><span class="info-val">B.Sc. CSE - BRAC University</span></div>
+          <div class="info-item"><span class="info-key">Location</span><span class="info-val">Dhaka, Bangladesh</span></div>
+          <div class="info-item"><span class="info-key">Status</span><span class="info-val"><span class="status-dot"></span>Available for opportunities</span></div>
+          <div class="info-item"><span class="info-key">Email</span><span class="info-val"><a href="mailto:adibhossain0077@gmail.com">adibhossain0077@gmail.com</a></span></div>
+          <div class="info-item"><span class="info-key">LinkedIn</span><span class="info-val"><a href="https://www.linkedin.com/in/moinul-hossain-0200b4242/" target="_blank" rel="noopener noreferrer">moinul-hossain</a></span></div>
+          <div class="info-item"><span class="info-key">GitHub</span><span class="info-val"><a href="https://github.com/Adib1133" target="_blank" rel="noopener noreferrer">Adib1133</a></span></div>
+          
+          <div class="info-title">My Socials</div>
+          
+          <div class="social-link-item">
+            <span class="info-key"><i class="fab fa-facebook-f"></i> Facebook</span>
+            <span class="info-val"><a href="https://facebook.com/Adib1133" target="_blank" rel="noopener noreferrer">moinul.adib</a></span>
+          </div>
+          <div class="social-link-item">
+            <span class="info-key"><i class="fab fa-instagram"></i> Instagram</span>
+            <span class="info-val"><a href="https://instagram.com/Adib1133" target="_blank" rel="noopener noreferrer">adib_1133</a></span>
+          </div>
+          <div class="social-link-item">
+            <span class="info-key"><i class="fab fa-x-twitter"></i> Twitter</span>
+            <span class="info-val"><a href="https://x.com/AdibHossain16" target="_blank" rel="noopener noreferrer">AdibHossain16</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="focus-grid reveal-up">
+        <article class="focus-card">
+          <i class="fas fa-server"></i>
+          <h3>Infrastructure</h3>
+          <p>Server upkeep, branch support, and dependable day-to-day IT operations.</p>
+        </article>
+        <article class="focus-card">
+          <i class="fas fa-code"></i>
+          <h3>Software</h3>
+          <p>Full-stack interfaces, APIs, dashboards, and maintainable project builds.</p>
+        </article>
+        <article class="focus-card">
+          <i class="fas fa-brain"></i>
+          <h3>AI & Data</h3>
+          <p>ML prototypes, NLP classifiers, simulations, and model-backed experiments.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02 / CAPABILITIES</span>
+        <h2 class="section-title">Skills</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal-up" style="--d:0s"><i class="fas fa-code"></i><span>Python</span></div>
+        <div class="skill-card reveal-up" style="--d:.05s"><i class="fa-regular fa-file-code"></i><span>C++</span></div>
+        <div class="skill-card reveal-up" style="--d:.1s"><i class="fas fa-database"></i><span>Data Structures</span></div>
+        <div class="skill-card reveal-up" style="--d:.15s"><i class="fas fa-brain"></i><span>Machine Learning</span></div>
+        <div class="skill-card reveal-up" style="--d:.2s"><i class="fa-solid fa-draw-polygon"></i><span>TensorFlow</span></div>
+        <div class="skill-card reveal-up" style="--d:.25s"><i class="fas fa-laptop-code"></i><span>Web Development</span></div>
+        <div class="skill-card reveal-up" style="--d:.3s"><i class="fa-brands fa-react"></i><span>React</span></div>
+        <div class="skill-card reveal-up" style="--d:.35s"><i class="fa-brands fa-html5"></i><span>HTML5 & CSS</span></div>
+        <div class="skill-card reveal-up" style="--d:.4s"><i class="fas fa-code-branch"></i><span>Laravel</span></div>
+        <div class="skill-card reveal-up" style="--d:.45s"><i class="fa-solid fa-flask"></i><span>Flask</span></div>
+        <div class="skill-card reveal-up" style="--d:.5s"><i class="fa-brands fa-microsoft"></i><span>Microsoft Azure</span></div>
+        <div class="skill-card reveal-up" style="--d:.55s"><i class="fa-brands fa-linux"></i><span>Linux</span></div>
+        <div class="skill-card reveal-up" style="--d:.6s"><i class="fas fa-robot"></i><span>Artificial Intelligence</span></div>
+        <div class="skill-card reveal-up" style="--d:.65s"><i class="fa-brands fa-github"></i><span>Git</span></div>
+        <div class="skill-card reveal-up" style="--d:.7s"><i class="fas fa-paint-brush"></i><span>Adobe Creative</span></div>
+        <div class="skill-card reveal-up" style="--d:.75s"><i class="fas fa-tasks"></i><span>SDLC</span></div>
+        <div class="skill-card reveal-up" style="--d:.8s"><i class="fas fa-lightbulb"></i><span>Problem Solving</span></div>
+        <div class="skill-card reveal-up" style="--d:.85s"><i class="fas fa-project-diagram"></i><span>Project Management</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03 / WORK</span>
+        <h2 class="section-title">Projects</h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card reveal-up" style="--d:0s" data-id="p1">
+          <div class="project-card-glow"></div>
+          <div class="project-top">
+            <span class="project-num">01</span>
+            <a href="https://github.com/Adib1133/Thesis" target="_blank" rel="noopener noreferrer" class="project-gh-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+          <h3>Single Image Super-Resolution</h3>
+          <p>Deep learning model using GANs to enhance image quality beyond native resolution.</p>
+          <div class="project-tags"><span>Deep Learning</span><span>GANs</span><span>TensorFlow</span></div>
+          <button class="btn-ghost-sm" onclick="openModal('p1')">View Details</button>
+        </div>
+        <div class="project-card reveal-up" style="--d:.05s" data-id="p2">
+          <div class="project-card-glow"></div>
+          <div class="project-top">
+            <span class="project-num">02</span>
+            <a href="https://github.com/Adib1133/klinik24-landing" target="_blank" rel="noopener noreferrer" class="project-gh-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+          <h3>Healthcare Landing Page</h3>
+          <p>Modern, responsive healthcare portal with Angular and TypeScript.</p>
+          <div class="project-tags"><span>Angular</span><span>TypeScript</span><span>CSS</span></div>
+          <button class="btn-ghost-sm" onclick="openModal('p2')">View Details</button>
+        </div>
+        <div class="project-card reveal-up" style="--d:.1s" data-id="p3">
+          <div class="project-card-glow"></div>
+          <div class="project-top">
+            <span class="project-num">03</span>
+            <a href="https://github.com/Adib1133/klinik-24" target="_blank" rel="noopener noreferrer" class="project-gh-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+          <h3>Klinik-24</h3>
+          <p>Full-featured clinic platform built with React and TypeScript, with modern UX.</p>
+          <div class="project-tags"><span>React</span><span>TypeScript</span><span>ESLint</span></div>
+          <button class="btn-ghost-sm" onclick="openModal('p3')">View Details</button>
+        </div>
+        <div class="project-card reveal-up" style="--d:.15s" data-id="p4">
+          <div class="project-card-glow"></div>
+          <div class="project-top">
+            <span class="project-num">04</span>
+            <a href="https://github.com/Adib1133/Predicting-Stock-Market-Trends-through-Monte-Carlo-Simulation" target="_blank" rel="noopener noreferrer" class="project-gh-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+          <h3>Stock Market Trend Simulation</h3>
+          <p>Python-based simulation and modeling of stock market trend behaviors.</p>
+          <div class="project-tags"><span>Python</span><span>Simulation</span><span>Modeling</span></div>
+          <button class="btn-ghost-sm" onclick="openModal('p4')">View Details</button>
+        </div>
+        <div class="project-card reveal-up" style="--d:.2s" data-id="p5">
+          <div class="project-card-glow"></div>
+          <div class="project-top">
+            <span class="project-num">05</span>
+            <a href="https://github.com/Adib1133/Hate-Speech-Detection" target="_blank" rel="noopener noreferrer" class="project-gh-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+          <h3>Hate Speech Detection</h3>
+          <p>ML and NLP model to detect and classify hate speech in text data.</p>
+          <div class="project-tags"><span>Python</span><span>ML</span><span>NLP</span></div>
+          <button class="btn-ghost-sm" onclick="openModal('p5')">View Details</button>
+        </div>
+        <div class="project-card reveal-up" style="--d:.25s" data-id="p6">
+          <div class="project-card-glow"></div>
+          <div class="project-top">
+            <span class="project-num">06</span>
+            <a href="https://github.com/Adib1133/Interface-Design" target="_blank" rel="noopener noreferrer" class="project-gh-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+          <h3>Interface Design</h3>
+          <p>Sleek UI/UX design system built with Vue, HTML, CSS, and JavaScript.</p>
+          <div class="project-tags"><span>Vue</span><span>HTML</span><span>CSS</span></div>
+          <button class="btn-ghost-sm" onclick="openModal('p6')">View Details</button>
+        </div>
+        <div class="project-card reveal-up" style="--d:.3s" data-id="p7">
+          <div class="project-card-glow"></div>
+          <div class="project-top">
+            <span class="project-num">07</span>
+            <a href="https://github.com/Adib1133/Websites" target="_blank" rel="noopener noreferrer" class="project-gh-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+          <h3>E-Commerce Medicine Store</h3>
+          <p>Full e-commerce platform for pharmacies using Laravel and MySQL.</p>
+          <div class="project-tags"><span>PHP</span><span>Laravel</span><span>MySQL</span></div>
+          <button class="btn-ghost-sm" onclick="openModal('p7')">View Details</button>
+        </div>
+        <div class="project-card reveal-up" style="--d:.35s" data-id="p8">
+          <div class="project-card-glow"></div>
+          <div class="project-top">
+            <span class="project-num">08</span>
+            <a href="https://github.com/Adib1133/2d-Animation" target="_blank" rel="noopener noreferrer" class="project-gh-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+          <h3>Road Safety Animation</h3>
+          <p>3D animated road safety visualization using Python, PyOpenGL, and GLUT.</p>
+          <div class="project-tags"><span>Python</span><span>PyOpenGL</span><span>GLUT</span></div>
+          <button class="btn-ghost-sm" onclick="openModal('p8')">View Details</button>
+        </div>
+        <div class="project-card reveal-up" style="--d:.4s" data-id="p9">
+          <div class="project-card-glow"></div>
+          <div class="project-top">
+            <span class="project-num">09</span>
+            <a href="https://github.com/Adib1133/Medicare" target="_blank" rel="noopener noreferrer" class="project-gh-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+          <h3>Complete Clinic Management System</h3>
+          <p>Full-stack MERN clinic management with React, Tailwind, MongoDB.</p>
+          <div class="project-tags"><span>React</span><span>MongoDB</span><span>NodeJS</span></div>
+          <button class="btn-ghost-sm" onclick="openModal('p9')">View Details</button>
+        </div>
+        <div class="project-card reveal-up" style="--d:.45s" data-id="p10">
+          <div class="project-card-glow"></div>
+          <div class="project-top">
+            <span class="project-num">10</span>
+            <a href="https://github.com/Adib1133/Aura-Weather" target="_blank" rel="noopener noreferrer" class="project-gh-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+          <h3>Minimalistic Weather App</h3>
+          <p>Real-time weather dashboard using Flask, Open-Meteo API, and BigDataCloud.</p>
+          <div class="project-tags"><span>Python</span><span>Flask</span><span>API</span></div>
+          <button class="btn-ghost-sm" onclick="openModal('p10')">View Details</button>
+        </div>
+        <!-- NEW PROJECT CARD 11: Snake Master (Game) -->
+        <div class="project-card reveal-up" style="--d:.5s" data-id="p11">
+          <div class="project-card-glow"></div>
+          <div class="project-top">
+            <span class="project-num">11</span>
+            <a href="https://github.com/Adib1133/Snake-Master---Game" target="_blank" rel="noopener noreferrer" class="project-gh-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+          <h3>Snake Master (Game)</h3>
+          <p>A modern, feature-rich twist on the classic Snake arcade game with power-ups, combos, multiple difficulties, skins, and local leaderboards.</p>
+          <div class="project-tags"><span>HTML5 Canvas</span><span>JavaScript</span><span>CSS3</span></div>
+          <button class="btn-ghost-sm" onclick="openModal('p11')">View Details</button>
+        </div>
+        <!-- NEW PROJECT CARD 12: Scripts -->
+        <div class="project-card reveal-up" style="--d:.55s" data-id="p12">
+          <div class="project-card-glow"></div>
+          <div class="project-top">
+            <span class="project-num">12</span>
+            <a href="https://github.com/Adib1133/Scripts" target="_blank" rel="noopener noreferrer" class="project-gh-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+          <h3>Scripts</h3>
+          <p>Built these scripts to automate mundane tasks and simplify everyday challenges I used to face.</p>
+          <div class="project-tags"><span>Python</span><span>C++</span><span>JavaScript</span></div>
+          <button class="btn-ghost-sm" onclick="openModal('p12')">View Details</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04 / BACKGROUND</span>
+        <h2 class="section-title">Education</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="timeline-card">
+            <div class="tcard-header">
+              <a href="https://www.bracu.ac.bd/" target="_blank" rel="noopener noreferrer"><img src="images/uni.png" alt="BRAC University" class="inst-logo"></a>
+              <div>
+                <h3>BRAC University</h3>
+                <span class="tcard-role">B.Sc. in Computer Science & Engineering</span>
+              </div>
+            </div>
+            <div class="tcard-date"><i class="fas fa-calendar"></i> Graduation: 2024 | C.G.P.A: 3.43/4.00</div>
+            <p>Focused on algorithms, AI/ML, software engineering, and full-stack development.</p>
+            <div class="tcard-extra">
+              <div class="extra-title">Co-Curricular Activities</div>
+              <ul class="extra-list">
+                <li>Member of Robotics Club of BRAC University (ROBU)</li>
+                <li>Participated in Inter-University Programming Contests</li>
+                <li>Volunteer for Tech-Fests and Workshop coordination</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon"><i class="fas fa-school"></i></div>
+          <div class="timeline-card">
+            <div class="tcard-header">
+              <a href="https://imperialcollege.edu.bd/" target="_blank" rel="noopener noreferrer"><img src="images/clg.png" alt="Dhaka Imperial College" class="inst-logo"></a>
+              <div>
+                <h3>Dhaka Imperial College</h3>
+                <span class="tcard-role">Higher Secondary Certificate (HSC)</span>
+              </div>
+            </div>
+            <div class="tcard-date"><i class="fas fa-calendar"></i> Session: 2019 | Group: Science | G.P.A: 3.83/5.00</div>
+            <div class="tcard-extra">
+              <div class="extra-title">Co-Curricular Activities</div>
+              <ul class="extra-list">
+                <li>Active member of the Photography Club</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon"><i class="fas fa-book"></i></div>
+          <div class="timeline-card">
+            <div class="tcard-header">
+              <a href="https://www.rajdhaniidealcollege.edu.bd/" target="_blank" rel="noopener noreferrer"><img src="images/scl.png" alt="Rajdhani Ideal School" class="inst-logo"></a>
+              <div>
+                <h3>Rajdhani Ideal School</h3>
+                <span class="tcard-role">Secondary School Certificate (SSC)</span>
+              </div>
+            </div>
+            <div class="tcard-date"><i class="fas fa-calendar"></i> Session: 2017 | Group: Science | G.P.A: 5.00/5.00</div>
+            <div class="tcard-extra">
+              <div class="extra-title">Co-Curricular Activities</div>
+              <ul class="extra-list">
+                <li>Participated in Science Fairs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">05 / CAREER</span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+      <div class="exp-grid">
+        <div class="exp-card reveal-up" style="--d:0s">
+          <div class="exp-card-top">
+            <a href="https://mg-bd.com/" target="_blank" rel="noopener noreferrer"><img src="images/mg.png" alt="Mashallah Group" class="exp-logo"></a>
+            <div class="exp-badge current">Current</div>
+          </div>
+          <h3>Mashallah Group</h3>
+          <span class="exp-role">System Engineer, IT</span>
+          <span class="exp-date"><i class="fas fa-calendar-alt"></i> August 2025 - Ongoing</span>
+          <ul class="exp-list">
+            <li>Managed IT operations and infrastructure for secure, reliable processes</li>
+            <li>Server and infrastructure maintenance across all branches</li>
+            <li>Optimized systems to reduce downtime and boost efficiency</li>
+          </ul>
+        </div>
+        <div class="exp-card reveal-up" style="--d:.1s">
+          <div class="exp-card-top">
+            <a href="https://www.g2i.co/about" target="_blank" rel="noopener noreferrer"><img src="images/g2.png" alt="G2i" class="exp-logo"></a>
+          </div>
+          <h3>G2i Inc.</h3>
+          <span class="exp-role">RLHF Code Reviewer</span>
+          <span class="exp-date"><i class="fas fa-calendar-alt"></i> November 2024 - June 2025</span>
+          <ul class="exp-list">
+            <li>GenAI development via reinforcement learning from human feedback</li>
+            <li>Collaborated with the AI development team to ensure smooth functionality</li>
+          </ul>
+        </div>
+        <div class="exp-card reveal-up" style="--d:.2s">
+          <div class="exp-card-top">
+            <a href="https://www.youtube.com/channel/UCMYuF0mNxTgOzr1lS7opIBQ" target="_blank" rel="noopener noreferrer"><img src="images/atc.png" alt="ATC" class="exp-logo"></a>
+          </div>
+          <h3>ATC Android ToTo Company</h3>
+          <span class="exp-role">Script Writer</span>
+          <span class="exp-date"><i class="fas fa-calendar-alt"></i> May 2023 - November 2023</span>
+          <ul class="exp-list">
+            <li>Written scripts for laptop product reviews and tech content</li>
+            <li>Collaborated with the writing team to ensure thorough review coverage</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- GAMING -->
+  <section id="gaming" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">06 / ENTERTAINMENT</span>
+        <h2 class="section-title">Gaming</h2>
+      </div>
+
+      <!-- Gaming Profiles -->
+      <div class="section-header" style="margin-top: 3rem;">
+        <span class="section-tag">PROFILE / 01</span>
+        <h2 class="gaming-title"><i class="fas fa-user-astronaut"></i> My IGN's</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="profiles-grid reveal-up">
+        <div class="profile-card">
+          <div class="p-icon"><i class="fab fa-steam"></i></div>
+          <div class="p-info">
+            <span class="p-platform">STEAM</span>
+            <span class="p-ign">Adib11331</span>
+          </div>
+        </div>
+        <div class="profile-card">
+          <div class="p-icon"><i class="fas fa-gamepad"></i></div>
+          <div class="p-info">
+            <span class="p-platform">EPIC GAMES</span>
+            <span class="p-ign">Sgt.Raven1133</span>
+          </div>
+        </div>
+        <div class="profile-card">
+          <div class="p-icon"><i class="fab fa-xbox"></i></div>
+          <div class="p-info">
+            <span class="p-platform">XBOX / MICROSOFT</span>
+            <span class="p-ign">Raven'X1133</span>
+          </div>
+        </div>
+        <div class="profile-card">
+          <div class="p-icon"><i class="fab fa-battle-net"></i></div>
+          <div class="p-info">
+            <span class="p-platform">BATTLE.NET</span>
+            <span class="p-ign">AdibHossain</span>
+          </div>
+        </div>
+        <div class="profile-card">
+          <div class="p-icon"><i class="fas fa-bolt"></i></div>
+          <div class="p-info">
+            <span class="p-platform">EA / ELECTRONIC ARTS</span>
+            <span class="p-ign">Sgt_Raven1133</span>
+          </div>
+        </div>
+        <div class="profile-card">
+          <div class="p-icon"><i class="fas fa-circle-notch"></i></div>
+          <div class="p-info">
+            <span class="p-platform">UBISOFT CONNECT</span>
+            <span class="p-ign">SgtRaven1133</span>
+          </div>
+        </div>
+        <div class="profile-card">
+          <div class="p-icon"><i class="fab fa-discord"></i></div>
+          <div class="p-info">
+            <span class="p-platform">DISCORD</span>
+            <span class="p-ign">adibhossain1133</span>
+          </div>
+        </div>
+        <div class="profile-card">
+          <div class="p-icon"><i class="fab fa-google-play"></i></div>
+          <div class="p-info">
+            <span class="p-platform">PLAY GAMES</span>
+            <span class="p-ign">LogAnツAdib</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Favorite Games -->
+      <div class="section-header" style="margin-top: 5rem;">
+        <span class="section-tag">FAVORITES / 02</span>
+        <h2 class="gaming-title"><i class="fas fa-gamepad"></i> Games I Like</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="games-grid-new reveal-up">
+        <div class="g-card">
+          <div class="g-card-header">
+            <div class="g-icon-box"><img src="images/origins.png" alt="Assassin's Creed Origins Logo" class="g-logo-img"></div>
+            <span class="g-num">01</span>
+          </div>
+          <h3>Assassin's Creed Origins</h3>
+          <div class="g-tags">
+            <span class="g-tag purple">ACTION RPG</span>
+            <span class="g-tag cyan"><i class="fab fa-steam"></i> PC</span>
+          </div>
+          <div class="g-why">Why I Like This:</div>
+          <p>Origins basically reignited my love for the series — ancient Egypt is just an insane setting to explore, and Bayek might be one of the most genuinely likable protagonists in the whole franchise. It's the kind of game where I'd lose hours just wandering around with no quest in mind.</p>
+        </div>
+
+        <div class="g-card">
+          <div class="g-card-header">
+            <div class="g-icon-box"><img src="images/death.png" alt="Death Stranding Logo" class="g-logo-img"></div>
+            <span class="g-num">02</span>
+          </div>
+          <h3>Death Stranding 1 & 2</h3>
+          <div class="g-tags">
+            <span class="g-tag purple"><i class="fas fa-skull"></i> ACTION-ADVENTURE</span>
+            <span class="g-tag cyan"><i class="fab fa-steam"></i> PC</span>
+          </div>
+          <div class="g-why">Why I Like This:</div>
+          <p>Most people wrote it off as a walking simulator, but I actually love how meditative it feels — there's something oddly peaceful about traversing a broken world and leaving things behind for strangers. The story is weird in the best way, and it stuck with me long after the credits rolled.</p>
+        </div>
+
+        <div class="g-card">
+          <div class="g-card-header">
+            <div class="g-icon-box"><img src="images/wukong.png" alt="Wukong Logo" class="g-logo-img"></div>
+            <span class="g-num">03</span>
+          </div>
+          <h3>Black Myth: Wukong</h3>
+          <div class="g-tags">
+            <span class="g-tag purple"><i class="fas fa-at"></i> ACTION RPG</span>
+            <span class="g-tag cyan"><i class="fas fa-crosshairs"></i> RIOT</span>
+          </div>
+          <div class="g-why">Why I Like This:</div>
+          <p>It's brutally hard but never feels unfair, and every boss fight feels like an actual event. The world they built around the Monkey King legend is gorgeous and surprisingly deep if you actually pay attention to the lore.</p>
+        </div>
+
+        <div class="g-card">
+          <div class="g-card-header">
+            <div class="g-icon-box"><img src="images/rdr.png" alt="Rdr Logo" class="g-logo-img"></div>
+            <span class="g-num">04</span>
+          </div>
+          <h3>Red Dead Redemption 2</h3>
+          <div class="g-tags">
+            <span class="g-tag purple">OPEN WORLD</span>
+            <span class="g-tag cyan"><i class="fab fa-steam"></i> PC</span>
+          </div>
+          <div class="g-why">Why I Like This:</div>
+          <p>Honestly, it's less of a game and more of an experience — I've never felt this attached to a fictional world and its characters before. Arthur Morgan's story is one of the best written in gaming, and I genuinely took my time with it because I didn't want it to end.</p>
+        </div>
+
+        <div class="g-card">
+          <div class="g-card-header">
+            <div class="g-icon-box"><img src="images/gow.png" alt="gow Logo" class="g-logo-img"></div>
+            <span class="g-num">05</span>
+          </div>
+          <h3>God of War (2018 & Onwards)</h3>
+          <div class="g-tags">
+            <span class="g-tag purple">ACTION ADVENTURE</span>
+            <span class="g-tag cyan"><i class="fas fa-bolt"></i> EA</span>
+          </div>
+          <div class="g-why">Why I Like This:</div>
+          <p>There's something about Kratos's journey that just hits different — watching this rage-filled god slowly learn to be a father is genuinely moving. The combat feels brutal and satisfying, but it's the quiet moments between Kratos and Atreus that keep me coming back.</p>
+        </div>
+
+        <div class="g-card">
+          <div class="g-card-header">
+            <div class="g-icon-box"><img src="images/me.png" alt="metro Logo" class="g-logo-img"></div>
+            <span class="g-num">06</span>
+          </div>
+          <h3>Metro Exodus</h3>
+          <div class="g-tags">
+            <span class="g-tag purple">FPS</span>
+            <span class="g-tag cyan"><i class="fab fa-playstation"></i> PSN</span>
+          </div>
+          <div class="g-why">Why I Like This:</div>
+          <p>The atmosphere in this game is unmatched — it makes the post-apocalypse feel lonely and human at the same time. Artyom's silent journey across a dying Russia has this strange emotional weight that most AAA games never even attempt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">07 / CONNECT</span>
+        <h2 class="section-title">Contact <span class="accent">Me</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <p>Reach out for IT roles, collaboration, project work, or a quick hello.</p>
+          <div class="contact-methods">
+            <div class="contact-method">
+              <i class="fas fa-location-dot"></i>
+              <span>Location</span>
+              <strong>Dhaka, Bangladesh</strong>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://www.linkedin.com/in/moinul-hossain-0200b4242/" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+            <a href="https://github.com/Adib1133" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-github"></i><span>GitHub</span></a>
+            <a href="https://x.com/AdibHossain16" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-twitter"></i><span>Twitter</span></a>
+          </div>
+          <a href="assets/Resume.pdf" download class="btn-primary inline-action"><i class="fas fa-download"></i> Download Resume</a>
+        </div>
+        <form class="contact-form reveal-right" id="contactForm">
+          <div class="form-group">
+            <input type="text" id="userName" name="user_name" placeholder="Your Name" required>
+            <label for="userName">Your Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="userEmail" name="user_email" placeholder="Your Email" required>
+            <label for="userEmail">Your Email</label>
+          </div>
+          <div class="form-group">
+            <textarea id="userMessage" name="message" placeholder="Your Message" rows="5" required></textarea>
+            <label for="userMessage">Your Message</label>
+          </div>
+          <button type="submit" class="btn-primary submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+          <div id="statusMessage" class="status-message"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-brand"><span class="brand-bracket">&lt;</span>ADIB<span class="brand-bracket">/&gt;</span></span>
+        <span class="footer-copy">&copy; 2026 Moinul Hossain. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="https://github.com/Adib1133" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/moinul-hossain-0200b4242/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scrollTop" title="Back to top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-hidden="true" onclick="closeModal()">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <button class="modal-close" id="modalClose" aria-label="Close project details" onclick="closeModal()"><i class="fas fa-times"></i></button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
